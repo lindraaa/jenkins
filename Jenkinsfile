@@ -13,7 +13,7 @@ pipeline {
         stage('Provision AWS Instance') {
             steps {
                 echo '[INFO] Deploying to AWS'
-                 sh 'scp -r jenkins 54.190.246.141:/var/www/html'
+                 sh 'scp -r web_app jenkins@54.190.246.141:/var/www/html'
             }
         }
         stage('Deploy') {

@@ -5,8 +5,8 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo '[INFO] Cloning Repository'
-               sh 'git clone --depth 1 --single-branch https://github.com/WonderCMS/wondercms.git'
-               sh 'ls wondercms'
+               //sh 'git clone --depth 1 --single-branch https://github.com/WonderCMS/wondercms.git'
+               //sh 'ls wondercms'
             }
         }
         stage('Provision AWS Instance') {
@@ -18,14 +18,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '[INFO] Sending Notifications'
-                sh 'sh notif.sh'
+                //sh 'sh notif.sh'
             }
         }
         stage('Notification') {
             steps {
                 echo '[INFO] Sending Notifications'
-                slackSend channel: '#random', message: 'test', teamDomain: 'randomresearchinc.slack.com', tokenCredentialId: 'slack'
-               cleanWs()
+                //slackSend channel: '#random', message: 'test', teamDomain: 'randomresearchinc.slack.com', tokenCredentialId: 'slack'
+                //cleanWs()
             }
         }
     }

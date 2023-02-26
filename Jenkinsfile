@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo '[INFO] Cloning Repository'
                 git branch: 'main', url: ' https://github.com/lindraaa/sample-website.git'
-                sh 'git clone --depth 1 --single-branch https://github.com/lindraaa/sample-website.git'
+               // sh 'git clone --depth 1 --single-branch https://github.com/lindraaa/sample-website.git'
               // sh 'ls wondercms'
             }
         }
